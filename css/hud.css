@@ -1,0 +1,75 @@
+:root {
+  --bg: #0b0b10;
+  --panel: #14141c;
+  --text: #d8d6cf;
+  --dim: #7a7870;
+  --hp: #c4453e;
+  --ok: #4a8f5c;
+  --warn: #c99a3a;
+  --font: 'Courier New', monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#game {
+  display: flex;
+  gap: 1px;
+  background: #000;
+}
+
+#view {
+  background: #060608;
+  image-rendering: pixelated;
+}
+
+#hud {
+  width: 260px;
+  background: var(--panel);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 13px;
+}
+
+#stats .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+#stats .bar {
+  height: 6px;
+  background: #222;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+#stats .bar > div {
+  height: 100%;
+}
+
+#log {
+  flex: 1;
+  overflow-y: auto;
+  border-top: 1px solid #2a2a35;
+  padding-top: 8px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2px;
+}
+
+#log .line { color: var(--dim); }
+#log .line.new { color: var(--text); }
