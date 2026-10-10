@@ -1,0 +1,8 @@
+{
+  "name": "astoria-web-prototipo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node tests/smoke-test.mjs"
+  }
+}

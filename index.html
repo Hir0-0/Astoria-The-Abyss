@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0b10" />
+  <title>Astoria: Abyssal Echoes (protótipo)</title>
+  <link rel="stylesheet" href="css/hud.css" />
+</head>
+<body>
+  <main id="game" aria-label="Astoria: Abyssal Echoes">
+    <canvas id="view" width="800" height="560" aria-label="Mapa do jogo"></canvas>
+    <aside id="hud" aria-label="Painel do jogador">
+      <div id="stats"></div>
+      <div id="controls" aria-label="Ações do jogo">
+        <div class="control-row map-controls">
+          <button type="button" data-key="<" id="go-up" title="Subir escadas (tecla menor que)">↑ Subir</button>
+          <button type="button" data-key=">" id="go-down" class="primary" title="Descer escadas (tecla maior que)">↓ Descer</button>
+        </div>
+        <div class="control-row move-controls" aria-label="Movimento">
+          <button type="button" data-key="ArrowUp" title="Mover para cima">↑</button>
+          <button type="button" data-key="ArrowLeft" title="Mover para a esquerda">←</button>
+          <button type="button" data-key="ArrowDown" title="Mover para baixo">↓</button>
+          <button type="button" data-key="ArrowRight" title="Mover para a direita">→</button>
+        </div>
+        <div class="control-row">
+          <button type="button" data-key="g" title="Pegar item ou colher recurso">Pegar [G]</button>
+          <button type="button" data-key="e" title="Comer ração">Comer [E]</button>
+          <button type="button" data-key="i" title="Abrir inventário">Inventário [I]</button>
+        </div>
+        <div class="control-row">
+          <button type="button" data-key="d" title="Descartar uma pilha do inventário">Descartar [D]</button>
+          <button type="button" data-key="c" title="Criar item na estação">Craft [C]</button>
+          <button type="button" data-key="t" title="Viajar entre bases">Viajar [T]</button>
+        </div>
+        <div class="control-row">
+          <button type="button" data-key="b" title="Construir posto avançado">Base [B]</button>
+          <button type="button" data-key="r" title="Descansar na base ou cama">Descansar [R]</button>
+          <button type="button" data-key="." title="Passar um turno">Esperar [.]</button>
+        </div>
+      </div>
+      <div id="hint">Setas ou botões movem · teclado numérico move na diagonal · Esc cancela menus · PgUp/PgDn usa escadas.</div>
+      <div id="log" role="log" aria-live="polite" aria-relevant="additions"></div>
+    </aside>
+  </main>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
